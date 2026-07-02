@@ -28,7 +28,7 @@ const corsOptions = {
         if (!origin) return callback(null, true);
 
         const allowed =
-            process.env.CLIENT_URL &&
+            process.env.CLIENT_URL || "https://job-portal-frontend-xi-eight.vercel.app" &&
             origin === process.env.CLIENT_URL;
 
         const isLocalhost =
